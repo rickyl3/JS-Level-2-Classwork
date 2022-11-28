@@ -35,7 +35,7 @@ div {
     text-decoration: underline wavy green;
 } */
 
-h1 {
+/* h1 {
     text-align: center;
 }
 p {
@@ -44,4 +44,10 @@ p {
 button {
     background-color: red;
     font: 14pt comic sans ms;
+} */
+
+a {
+    font: 24pt arial;
+    color: blue;
+    text-decoration: none;
 }

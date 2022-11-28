@@ -40,23 +40,38 @@
 //     textOutput.style.fontSize = fontSize + "pt";
 // }
 
+// function initialize() {
+//     numberOutput = document.getElementById("numout");
+//     rndNum = 0;
+
+//     display();
+// }
+// function getRandomInteger(lower, upper) {
+//     //R = parseInt(rnd * (upper - (lower - 1)) + lower)
+//     var multiplier = upper - (lower - 1);
+//     var rnd = parseInt(Math.random() * multiplier) + lower;
+
+//     return rnd;
+// }
+// function changeNumber() {
+//     rndNum = getRandomInteger(1, 10);
+//     display();
+// }
+// function display() {
+//     numberOutput.innerHTML = rndNum;
+// }
+
 function initialize() {
-    numberOutput = document.getElementById("numout");
-    rndNum = 0;
+    visitsOut = document.getElementById("visits");
 
-    display();
-}
-function getRandomInteger(lower, upper) {
-    //R = parseInt(rnd * (upper - (lower - 1)) + lower)
-    var multiplier = upper - (lower - 1);
-    var rnd = parseInt(Math.random() * multiplier) + lower;
+    if (!sessionStorage.numVisits) {
+        sessionStorage.numVisits = 0;
+    } else {
+        sessionStorage.numVisits++;
+    }
 
-    return rnd;
-}
-function changeNumber() {
-    rndNum = getRandomInteger(1, 10);
     display();
 }
 function display() {
-    numberOutput.innerHTML = rndNum;
+    visitsOut.innerHTML = sessionStorage.numVisits;
 }
